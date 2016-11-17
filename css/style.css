@@ -547,3 +547,9 @@ section.success {
 .whitelinks a {
     color: whitesmoke;
 }
+
+.talk {
+    margin-top: 1em;
+    background-color:#e91e63;
+    border-color:#e91e63;
+}
