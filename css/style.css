@@ -16,7 +16,15 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #5CAC73;
+    color: blue;
+}
+
+div.whitelinks a {
+    color: whitesmoke;
+}
+
+button a {
+    text-decoration: none !important;
 }
 
 h1,
@@ -542,10 +550,6 @@ section.success {
 .flatten {
     width: 100% !important;
     margin-left: 0% !important;
-}
-
-.whitelinks a {
-    color: whitesmoke;
 }
 
 .talk {
