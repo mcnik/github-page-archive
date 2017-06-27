@@ -1,0 +1,653 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "name": "START",
+      "conditions": "conversation_start || @Jump_In_URLs",
+      "jumpto": "USER_SIGNED_IN (condition)",
+      "note": "Custom annotation here",
+      "children": [
+        {
+          "name": "USER_SIGNED_IN",
+          "children": [
+            {
+              "name": "GREETING_PART_OF_DAY",
+              "children": [
+                {
+                  "name": "AGENT_INTRO_AND_CAPABILITIES"
+                },
+                {
+                  "name": "JUMP_IN_TRAN_GET_ACTIVATION_CODE",
+                  "children": [
+                    {
+                      "name": "JI_TRAN_GET_ACT_CODE_Escalate_to_Agent"
+                    },
+                    {
+                      "name": "JI_TRAN_GET_ACT_CODE_Create_Case"
+                    },
+                    {
+                      "name": "JI_TRAN_GET_ACT_CODE_CR_Y"
+                    },
+                    {
+                      "name": "JI_TRAN_GET_ACT_CODE_CR_N"
+                    }
+                  ]
+                },
+                {
+                  "name": "JUMP_IN_INQ_CONTRACT_ADMIN_DIRECT",
+                  "children": [
+                    {
+                      "name": "JI_Customer_Response_1"
+                    },
+                    {
+                      "name": "JI_Customer_Response_2"
+                    }
+                  ]
+                },
+                {
+                  "name": "JUMP_IN_INQ_ACTIVATION_AND_REGISTRATION"
+                },
+                {
+                  "name": "JUMP_IN_INQ_DOWNLOADS_UPGRADES"
+                },
+                {
+                  "name": "JUMP_IN_INSTALL_NLM_DIRECT"
+                },
+                {
+                  "name": "JUMP_IN_INSTALL_DIRECT"
+                },
+                {
+                  "name": "JUMP_IN_INQ_AUTODESK_ACCOUNT"
+                },
+                {
+                  "name": "JUMP_IN_INSTALL_SN_PRODUCTKEY_DIRECT"
+                },
+                {
+                  "name": "JUMP_IN_INSTALL_SYSTEM_REQ_DIRECT"
+                },
+                {
+                  "name": "JUMP_IN_INSTALL_UNINSTALL_DIRECT"
+                },
+                {
+                  "name": "JUMP_IN_INQ_TOL_LICENSE_REPORTS_ETC"
+                },
+                {
+                  "name": "JUMP_IN_TRAN_HULA",
+                  "children": [
+                    {
+                      "name": "HULA_Source_AccountsPortal"
+                    },
+                    {
+                      "name": "HULA_Source_Null"
+                    }
+                  ]
+                },
+                {
+                  "name": "JUMP_IN_TRAN_PREVIOUS_VERSION",
+                  "children": [
+                    {
+                      "name": "PV_Source_AccountsPortal"
+                    },
+                    {
+                      "name": "PV_Source_Null"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SIGN_IN",
+      "children": [
+        {
+          "name": "SIGN_IN_CONDITION_CHECK"
+        },
+        {
+          "name": "AE_YN_SIGN_IN"
+        },
+        {
+          "name": "CONFIRM_ACTIVATION_SIGN_IN"
+        },
+        {
+          "name": "ACTIVATION_SIGN_IN"
+        },
+        {
+          "name": "CHANGE_CM_SIGN_IN"
+        },
+        {
+          "name": "CHANGE_SC_SIGN_IN"
+        },
+        {
+          "name": "CHAT_AGENT_SIGN_IN"
+        },
+        {
+          "name": "CREATE_CASE_SIGN_IN"
+        },
+        {
+          "name": "FORM_HULA_SIGN_IN"
+        },
+        {
+          "name": "FORM_PV_SIGN_IN"
+        },
+        {
+          "name": "I_NEED_HELP_SIGN_IN"
+        },
+        {
+          "name": "PRE_HULA_SIGN_IN"
+        },
+        {
+          "name": "TRAN_PV_SIGN_IN"
+        },
+        {
+          "name": "GOODBYE_ANYTHING_ELSE_SIGN_IN"
+        }
+      ]
+    },
+    {
+      "name": "SIGN_OUT",
+      "children": [
+        {
+          "name": "SIGN_OUT_CONDITION_CHECK"
+        },
+        {
+          "name": "AE_YN_SIGN_OUT"
+        },
+        {
+          "name": "ACTIVATION_SIGN_OUT"
+        },
+        {
+          "name": "CHANGE_CM_SIGN_OUT"
+        },
+        {
+          "name": "CHANGE_SC_SIGN_OUT"
+        },
+        {
+          "name": "CHAT_AGENT_SIGN_OUT"
+        },
+        {
+          "name": "CREATE_CASE_SIGN_OUT"
+        },
+        {
+          "name": "HULA_SIGN_OUT"
+        },
+        {
+          "name": "REQUEST_PV_SIGN_OUT"
+        },
+        {
+          "name": "GOODBYE_ANYTHING_ELSE_SIGN_OUT"
+        }
+      ]
+    },
+    {
+      "name": "ANSWER_WAS_NOT_HELPFUL"
+    },
+    {
+      "name": "CONTACT_NOT_WORKING"
+    },
+    {
+      "name": "WEB_SERVICES",
+      "children": [
+        {
+          "name": "TRAN_HULA",
+          "children": [
+            {
+              "name": "HULA_NEW"
+            },
+            {
+              "name": "HULA_RENEW_EXTEND"
+            },
+            {
+              "name": "HULA_FALL_THROUGH"
+            },
+            {
+              "name": "HULA_QUESTIONS"
+            },
+            {
+              "name": "MID_HULA_SIGN_IN"
+            },
+            {
+              "name": "HULA_AA"
+            }
+          ]
+        },
+        {
+          "name": "TRAN_REQUEST_PV",
+          "children": [
+            {
+              "name": "TRAN_REQUEST_PV_CR_Y"
+            },
+            {
+              "name": "REQUEST_PV_FORM"
+            },
+            {
+              "name": "MID_PV_SIGN_IN"
+            },
+            {
+              "name": "PV_AA"
+            }
+          ]
+        },
+        {
+          "name": "TRAN_CHANGE_CONTRACT_MANAGER",
+          "children": [
+            {
+              "name": "TRUE_Tran_Change_Contract_Manager"
+            },
+            {
+              "name": "CHANGE_CM_HIGH_CONFIDENCE"
+            }
+          ]
+        },
+        {
+          "name": "TRAN_CHANGE_SOFTWARE_COORDINATOR",
+          "children": [
+            {
+              "name": "CHANGE_SC_HIGH_CONFIDENCE"
+            },
+            {
+              "name": "CHANGE_SC_CONFIRM_REQUEST"
+            }
+          ]
+        },
+        {
+          "name": "TRAN_GET_ACTIVATION_CODE",
+          "children": [
+            {
+              "name": "Confirm_Request_for_Activation_Code"
+            },
+            {
+              "name": "CL_INPUT_OR_HIGH_CONFIDENCE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "I_NEED_HELP"
+    },
+    {
+      "name": "WANT_PHONE_NUMBER",
+      "children": [
+        {
+          "name": "REQUEST_PHONE_NUMBER_GIVE_AVA_A_CHANCE"
+        },
+        {
+          "name": "GIVE_PHONE_ANSWER"
+        }
+      ]
+    },
+    {
+      "name": "CREATE_CASE",
+      "children": [
+        {
+          "name": "NOT_SILENT_AND_NOT_CL"
+        },
+        {
+          "name": "CL_CREATE_CASE",
+          "children": [
+            {
+              "name": "FORM_CREATE_CASE",
+              "children": [
+                {
+                  "name": "CL_Create_Case_CastIron_Error"
+                },
+                {
+                  "name": "SUCCESS_CASE_CREATE"
+                },
+                {
+                  "name": "CHAT_WITH_AGENT_FROM_CASE_CREATE"
+                },
+                {
+                  "name": "CASE_INPUT_SIGN_IN"
+                },
+                {
+                  "name": "CASE_INPUT_SIGN_OUT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CHAT_WITH_AGENT",
+      "children": [
+        {
+          "name": "CONFIRM_CONTACT_TYPE",
+          "children": [
+            {
+              "name": "FORM_PLEASE_FILL_CHAT_FORM",
+              "children": [
+                {
+                  "name": "FORM_CHAT_WITH_AGENT",
+                  "children": [
+                    {
+                      "name": "FORM_PLEASE_FILL_CHAT_FROM_CR_CANCEL"
+                    },
+                    {
+                      "name": "CONFIRM_CONTACT_TYPE_CR_CANCEL"
+                    },
+                    {
+                      "name": "AGENTS_NA_FORM_CHAT_WITH_AGENT"
+                    },
+                    {
+                      "name": "CONFIRM_CONTACT_TYPE_CR_N"
+                    },
+                    {
+                      "name": "AGENT_CHAT_SIGN_IN"
+                    },
+                    {
+                      "name": "AGENT_CHAT_SIGN_OUT"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ANYTHING_ELSE_YES_NO",
+      "children": [
+        {
+          "name": "ANYTHING_ELSE_CR_Y"
+        },
+        {
+          "name": "ANYTHING_ELSE_CR_N"
+        },
+        {
+          "name": "ANYTHING_ELSE_ESCALATE_AGENT"
+        },
+        {
+          "name": "ANYTHING_ELSE_CREATE_CASE"
+        },
+        {
+          "name": "ANYTHING_ELSE_YN_SIGN_IN"
+        },
+        {
+          "name": "ANYTHING_ELSE_YN_SIGN_OUT"
+        }
+      ]
+    },
+    {
+      "name": "HOPE_THAT_HELPED"
+    },
+    {
+      "name": "CONVERSATION_SUBS",
+      "children": [
+        {
+          "name": "HELLOS"
+        },
+        {
+          "name": "ABUSE"
+        },
+        {
+          "name": "CAPABILITIES"
+        },
+        {
+          "name": "OUT_OF_DIALOG_SCOPE"
+        },
+        {
+          "name": "OFF_TOPIC_PENDING"
+        },
+        {
+          "name": "ANYTHING_ELSE_THAT_I_CAN_HELP_WITH",
+          "children": [
+            {
+              "name": "MORE_HELP_NO"
+            },
+            {
+              "name": "MORE_HELP_YES"
+            }
+          ]
+        },
+        {
+          "name": "OFF_TOPIC_LIVE"
+        },
+        {
+          "name": "PLEASANTRIES"
+        },
+        {
+          "name": "TRUE_CONV_SUBS"
+        },
+        {
+          "name": "KNOWLEDGE_TESTS",
+          "children": [
+            {
+              "name": "MEANING_OF_LIFE"
+            },
+            {
+              "name": "SWALLOW"
+            },
+            {
+              "name": "DOGS"
+            },
+            {
+              "name": "COCONUTS"
+            },
+            {
+              "name": "OTHER_KNOWLEDGE_TEST"
+            },
+            {
+              "name": "POLITICS"
+            },
+            {
+              "name": "CEO"
+            },
+            {
+              "name": "KNOLEDGE_CHECKS"
+            }
+          ]
+        },
+        {
+          "name": "GOODBYES",
+          "children": [
+            {
+              "name": "GOODBYE_AND_END"
+            },
+            {
+              "name": "GOODBYE_AND_ANYTHING_ELSE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GENERAL_ERRORS"
+    },
+    {
+      "name": "REG_ACT_GENERAL"
+    },
+    {
+      "name": "CONTACT_NOT_WORKING"
+    },
+    {
+      "name": "INSTALLATION"
+    },
+    {
+      "name": "ACTIVATION"
+    },
+    {
+      "name": "DOWNLOAD"
+    },
+    {
+      "name": "ACCOUNT"
+    },
+    {
+      "name": "LICENSING",
+      "children": [
+        {
+          "name": "LICENSING_REQ_REPORT"
+        },
+        {
+          "name": "LICENSING_MOVE_LICENSE"
+        },
+        {
+          "name": "LICENSING_TOL"
+        },
+        {
+          "name": "Licensing_Cascading_Licenses"
+        },
+        {
+          "name": "Licensing_NLM_Deployment"
+        },
+        {
+          "name": "LICENSING_QUESTIONS"
+        },
+        {
+          "name": "LICENSING_EDUCATION"
+        },
+        {
+          "name": "Licensing_License_Borrowing"
+        },
+        {
+          "name": "LICENSING_LICENSE_FILE"
+        },
+        {
+          "name": "Licensing_License_Server"
+        },
+        {
+          "name": "LICENSING_NETWORK_TO_STANDALONE"
+        },
+        {
+          "name": "LICENSING_NLM_INSTALL"
+        },
+        {
+          "name": "LICENSING_CONTROL_LICENSE_USAGE"
+        },
+        {
+          "name": "LICENSING_SUBS_RENEW_CANCEL"
+        },
+        {
+          "name": "Licensing_Prev_Version"
+        },
+        {
+          "name": "LICENSING_SN_QUESTIONS_AND_ERRORS"
+        },
+        {
+          "name": "LICENSING_NLM"
+        },
+        {
+          "name": "LICENSING_ERROR_TBR",
+          "children": [
+            {
+              "name": "NO_LICENSE_ERR_SPECIFIED_TBR",
+              "children": [
+                {
+                  "name": "TRUE_NO_LICENSE_ERR_SPEC_TBR",
+                  "children": [
+                    {
+                      "name": "TRUE_NO_LICENSE_ERR_SPEC_CR_ESCALATE_AGENT_TBR"
+                    },
+                    {
+                      "name": "TRUE_NO_LICENSE_ERR_SPEC_CR_TRYAGAIN_TBR"
+                    },
+                    {
+                      "name": "TRUE_TRUE_NO_LICENSE_ERR_SPEC_TBR"
+                    }
+                  ]
+                },
+                {
+                  "name": "LICENSING_MISCAT_ACCOUNT_TBR"
+                },
+                {
+                  "name": "LICENSING_MISCAT_DOWNLOAD_TBR"
+                },
+                {
+                  "name": "LICENSING_MISCAT_INSTALL_TBR"
+                },
+                {
+                  "name": "LICENSING_MISCAT_RUNTIME_TBR"
+                },
+                {
+                  "name": "LICENSING_MISCAT_ACTIVATION_TBR"
+                }
+              ]
+            },
+            {
+              "name": "LICENSE_ERRORS_TBR"
+            }
+          ]
+        },
+        {
+          "name": "LICENSING_NLM_ERROR_TBR"
+        }
+      ]
+    },
+    {
+      "name": "OPERATING_SYSTEM_QUESTIONS",
+      "children": [
+        {
+          "name": "TRUE_OPERATING_SYTEM_QUESTIONS",
+          "children": [
+            {
+              "name": "OPERATING_SYS_QS_ADSK_PRODUCTS"
+            },
+            {
+              "name": "TRUE_TRUE_OPERATING_SYSTEM_QUESTIONS"
+            }
+          ]
+        },
+        {
+          "name": "OS_REQUIREMENT_QUESTIONS"
+        }
+      ]
+    },
+    {
+      "name": "SET_CONTACT_TYPE",
+      "children": [
+        {
+          "name": "TRUE_SET_CONTACT_TYPE",
+          "children": [
+            {
+              "name": "TRUE_SET_CONTACT_TYPE_CR_CANCEL"
+            },
+            {
+              "name": "SET_TYPE_COUNTER_TO_1"
+            }
+          ]
+        },
+        {
+          "name": "PURCHASES_AND_RETURNS"
+        },
+        {
+          "name": "PRODUCT_OR_TECHNICAL_SUPPORT"
+        },
+        {
+          "name": "CONNECT_TO_AGENT"
+        },
+        {
+          "name": "LICENSE_MANAGEMENT"
+        },
+        {
+          "name": "AUTODESK_ACCOUNT"
+        },
+        {
+          "name": "CONTACT_ACTIVATION"
+        },
+        {
+          "name": "DOWNLOADS_UPGRADES"
+        },
+        {
+          "name": "CONTACT_INSTALLATION"
+        },
+        {
+          "name": "SET_CONTACT_TYPE_SIGN_IN"
+        }
+      ]
+    },
+    {
+      "name": "RESTART"
+    },
+    {
+      "name": "BLANK_INPUT"
+    },
+    {
+      "name": "ANYTHING_ELSE"
+    }
+  ]
+}
